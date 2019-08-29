@@ -1,20 +1,15 @@
 {
-"hints":{
+	"hints":{
 		"year":{
-			"xpath":"//script[contains(@type,'text/javascript')][14]",
-			"regex":"year:\\s('\\d{4}')"
-		},
-		"make":{
-			"xpath":"//script[contains(@type,'text/javascript')][14]",
-			"regex":"make:\\s('\\w+')"
+			"regex":"(\\d{4}+)"
 		},
 		"model":{
-			"xpath":"//script[contains(@type,'text/javascript')][14]",
-			"regex":"model:\\s('\\w+')"
+			"xpath":"//script[contains(@type,'text/javascript')]",
+			"regex":"model:\\s(.*)"
 		},
 		"trim":{
-			"xpath":"//div[contains(@class,'ddc-content tracking-ddc-data-layer')]",
-			"regex": "\"trim\"\\:\\s(\"\\w+\")"
+			"xpath":"",
+			"regex":""
 		}
 	}
 }
