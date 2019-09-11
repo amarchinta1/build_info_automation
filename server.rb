@@ -38,7 +38,7 @@ class Test
 		year=[]
 		data=[]
 		vins.each{ |k|
-			log.info("Getting info of #{k} From Search Api")
+		log.info("Getting info of #{k} From Search Api")
 	    	api_uri= "https://marketcheck-prod.apigee.net/v1/search?api_key=14mBZaYAxBfLSNbL0Z2LlAG3009LMV79&vin=#{k}"
 			curl_data = HTTParty.get(api_uri) rescue nil		
 			curl_data["listings"].each{ |_listing|
@@ -56,20 +56,6 @@ class Test
 		data =[year, listings_make, headings,dp_urls]
 		return data
 	end
-
-	# def get_dp_urls
-	# 		log=Logger.new(STDOUT)	
-	# 		dp_urls=[]
-	# 			@vins.each{ |k|
-	# 		       log.info("Getting dp_url of #{k} from Search API")
-	# 			 	api_uri= "https://marketcheck-prod.apigee.net/v1/search?api_key=14mBZaYAxBfLSNbL0Z2LlAG3009LMV79&vin=#{k}"
-	# 				curl_data = HTTParty.get(api_uri)
-	# 				curl_data["listings"].each{|_listing|
-	# 					dp_urls << _listing["vdp_url"] rescue nil
-	# 				}
-	# 			}
-	# 	return dp_urls
-	# end
 
 	def get_file
 		log=Logger.new(STDOUT)	
