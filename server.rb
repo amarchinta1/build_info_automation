@@ -38,7 +38,7 @@ class Test
 		year=[]
 		data=[]
 		vins.each{ |k|
-			log.info("Getting info of #{k} From Search Api")
+		log.info("Getting info of #{k} From Search Api")
 	    	api_uri= "https://marketcheck-prod.apigee.net/v1/search?api_key=14mBZaYAxBfLSNbL0Z2LlAG3009LMV79&vin=#{k}"
 			curl_data = HTTParty.get(api_uri) rescue nil		
 			curl_data["listings"].each{ |_listing|
